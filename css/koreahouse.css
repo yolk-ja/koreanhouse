@@ -1,0 +1,204 @@
+@charset "utf-8";
+@import url(fonts.css);
+
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-weight: 400;
+    color: rgba(0,0,0,0.7);
+}
+
+/* 공통요소 */
+.inner {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+h2, h3, h4 {
+    font-weight: 500;
+    color: #000;
+}
+h2 {
+    font-size: 34px;
+    font-weight: 600;
+}
+h3 {
+    font-size: 34px;
+}
+h4 {
+    font-size: 20px;
+}
+.content_box {
+    padding: 25px 20px 20px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+.content_box > .inner_box {
+    background: #d9d9d9;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.inner_box ul li {
+    position: relative;
+    margin-bottom: 10px;
+}
+.inner_box ul li:before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 0;
+    width: 6px; height: 6px;
+    background: #bb9b72;
+    transform: rotate(45deg);   
+}
+.text {
+    line-height: 1.6;
+}
+.btn {
+    width: 180px;
+    height: 40px;
+    background: #fff url(../img/menu_arrow.png) no-repeat center right 30px;
+    border: 1px solid #dedede;
+    color: #2d2d2d;
+    font-size: 15px;
+}
+/* header */
+header .header_top {
+    padding: 25px 0;
+    height: 50px;
+    border-bottom: 1px solid #d9d9d9;
+}
+header .header_top .inner {
+    height: 100%;
+}
+.header_top .logo {
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    width: 128px;
+    height: 52px;
+}
+.header_top .logo > a {
+    display: block;
+    height: 100%;
+    background: url(../img/logo.png) no-repeat center/contain;
+}
+.header_top .search_area {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%); /* X Y */
+    width: 380px;
+    height: 40px;
+    border: 1px solid #c77777;
+    border-radius: 44px;
+    overflow: hidden;
+}
+.header_top .search_area input {
+    width: 100%;
+    height: 100%;
+    border-radius: 44px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.header_top .search_area input:focus {
+    outline-color: #c77777;
+}
+.header_top .search_area button {
+    position: absolute;
+    top: 50%; right: 20px;
+    transform: translateY(-50%);
+    background: none;
+}
+.header_top .util_area {
+    position: absolute;
+    top: 50% ; right: 0;
+    transform: translateY(-50%);
+    display: flex;
+}
+.header_top .util_area > ul {
+    display: flex;
+    margin-right: 20px;
+}
+.header_top .util_area > ul > li {
+    margin: 0 3px;
+} 
+.header_top .util_area > ul > li img {
+    width: 36px;
+}
+.header_top .util_area #select_lang {
+    width: 140px;
+    height: 32px;
+    padding-left: 10px;
+    border-radius: 40px;
+    border: 1px solid #dedede;
+    font-size: 14px;
+    background: #fff url(../img/arr_01.png) no-repeat center right 10px;
+    appearance: none; /* 화살표 없애기 */
+}
+.header_top .util_area #select_lang:focus {
+    outline: none;
+}
+/* header_bottom */
+.header_bottom .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_bottom .gnb {
+    padding: 20px 0;
+    display: flex;
+}
+.header_bottom .gnb > a {
+    width: 36px;
+    height: 36px;
+}
+.header_bottom .gnb > a img {
+    width: 100%;
+}
+.header_bottom .gnb > ul {
+    display: flex;
+    margin-left: 50px;
+    gap: 60px;
+}
+.header_bottom .gnb > ul > li {
+    margin-right: 30px;
+}
+.header_bottom .gnb > ul > li > a {
+    display: block;
+    padding: 0 20px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #000;
+}
+.header_bottom .gnb > ul > li:hover > a {
+    color: #c77777;
+}
+.header_bottom .btns_right {
+    display: flex;
+    gap: 10px;
+}
+.header_bottom .btns_right > li {
+    background: url(../img/ico_call.png) no-repeat;
+    font-weight: 600;
+    padding: 0 23px;
+}
+.header_bottom .btns_right > li:first-child::after {
+    content: '';
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.2);
+    margin-left: 20px;
+}
+.header_bottom .btns_right > li + li {
+    background: url(../img/ico_label.png) no-repeat;
+    padding: 0 23px;
+}
+/* main_img */
+
+.main_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 230px;
+    background: url(../img/visual_bg.jpg) no-repeat center/cover;
+}
+.main_img h2 {
+    color: #fff;
+}
